@@ -1,0 +1,113 @@
+
+html,body {padding:0; margin:0;}
+
+body{
+  width: 100%;
+  height:100%;
+  padding:0;
+  margin: 0;
+  background-image:url("img/letter.gif");
+  background-repeat: no-repeat;
+  background-color: black;
+  position: fixed;
+  background-size: cover;
+}
+
+.grid-container {
+  min-width: 70%;
+  min-height:10%;
+  display: grid;
+ grid-template-columns: 2fr 2fr 3fr 2fr  ;
+ overflow: visible;
+  background-color: none;
+  padding-top: 100px;
+  margin: 0;
+}
+.grid-item {
+  max-width: 100%;
+  overflow: visible;
+  background-color: none;
+  padding: 0;
+  font-size: 30px;
+  text-align: center;
+}
+img{
+  width:100%;
+  height:100%;
+}
+
+
+
+.hide {
+  display: none;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.fab{
+  min-width:20%;
+  min-height:20%;
+
+}
+
+.fab:hover + .hide {
+  display:grid;
+
+}
+
+.brass{
+  width:100%;
+  height: 100%;
+
+
+}
+
+.brass:hover + .hide {
+  display: block;
+
+}
+
+.dot{
+  width:100%;
+  height: 100%;
+}
+
+.jimmy{
+  width:100%;
+  height: 100%;
+}
+
+.toni{
+  width:100%;
+  height: 100%;
+}
+
+.sharpe{
+  width:100%;
+  height: 100%;
+}
+
+.tuggie{
+  width:20%;
+  height: 20%;
+}
+
+.dot:hover + .hide {
+  display: block;
+}
+
+.jimmy:hover + .hide {
+  display: block;
+}
+
+.toni:hover + .hide {
+  display: block;
+}
+
+.tuggie:hover + .hide {
+  display: block;
+}
+
+.sharpe:hover + .hide {
+  display: block;
+}
