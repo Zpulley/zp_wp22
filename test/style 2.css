@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Clifton";
+  src: url("/fonts/Clifton-Italic.otf");
+}
+body{
+  background-color: magenta;
+}
+
+p{
+  font-size:20px;
+  viewport:50%;
+    font-family: Clifton;
+}
+
+.testclass {
+  color:rgba(200,220,230,.5);/* how to add an alpha layer to text*/
+  text-decoration:overline;
+  font-size: 30pt;
+  font-family:sans-serif;
+  text-align: center;
+}
+.elmo{
+  background-color: blue;
+  background-position: center;
+  padding-left: 40%;
+}
