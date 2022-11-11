@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Clifton";
+  src: url(fonts/Clifton-Italic);
+}
+
+.boxtest{
+  position: fixed;
+  margin:20%;
+  font-family: Clifton;
+  text-align: center;
+  max-width: 600px;
+  border-color: magenta;
+  background-color: yellow;
+  border-style: solid;
+  border-radius: 0px;
+  padding-left: 100px;
+  padding-right: 100px;
+
+
+}
+
+.boxtest:hover{
+  font-family: Clifton;
+  font-style: italic;
+  color:white;
+  max-width: 600px;
+  border-color: blue;
+  background-color: magenta;
+  border-style: solid;
+  border-radius: 500px;
+  border-width: 60px;
+  padding-left: 100px;
+  padding-right: 100px;
+
+}
+/* how to add hover effect!*/
+
+.back{
+  text-align: center;
+  font-variant: small-caps;
+  font-size: 40px;
+}

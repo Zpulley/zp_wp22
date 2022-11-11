@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<style>
+			* {
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+			}
+			html {
+				scroll-behavior: smooth;
+				background-color: blue;
+				font-family: sans-serif;
+			}
+			.container {
+				color: white;
+				width: 100vw;
+				min-height: 100vh;
+				padding-bottom: 100px;
+				font-size: 8vw;
+				overflow-x: hidden;
+			}
+			.container * {
+				display: inline;
+				position: relative;
+				vertical-align: top;
+				text-shadow: 0 0 20px blue;
+				pointer-events: none;
+			}
+			.container p {
+				z-index: 2;
+			}
+			.container img {
+				height: 1em;
+				z-index: 1;
+			}
+			.active {
+				cursor: pointer;
+				background-color: magenta;
+				color: white;
+				text-shadow: 0 0 3px white;
+				pointer-events: all;
+			}
+			.active:hover {
+				opacity: .5;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<p data-time="1000">Hi there Gabriel!</p>
+			<p data-time="1000">wowowowowowoow.</p>
+			<p data-time="1000">one</p>
+			<p data-time="1000">thank you.</p>
+			<img data-time="200" src="img/1.gif">
+			<p data-time="300">you really did me a</p>
+			<img data-time="200" src="img/2.png">
+			<p data-time="600">here.</p>
+			<p data-time="300">two</p>
+			<p data-time="600">as a token of my grattitude</p>
+			<img data-time="200" src="img/3.gif">
+			<p data-time="300">here are some pennies to treat yourself to some vino from campus wines</p>
+			<img data-time="200" src="img/4.jpg">
+			<p data-time="600">/ please know that I will be crediting you in this project</p>
+			<p data-time="600">:)</p>
+			<img data-time="200" src="img/5.gif">
+			<p data-time="600">/ ok, please note I will leave campus pennies on your desk in studio.</p>
+			<img data-time="200" src="img/6.jpg">
+		</div>
+		<script>
+			let container = document.querySelector(".container");
+			let content = document.querySelectorAll(".container *");
+			for (i=0; i<content.length; i++) {
+				content[i].addEventListener("click", nextFrame);
+				content[i].style.display = "none";
+			}
+
+			let frame = 0;
+			content[frame].style.display = "inline";
+			content[frame].classList.add("active");
+			content[frame].scrollIntoView(true);
+
+			function nextFrame() {
+				let audio = new Audio("sounds/audio"+frame+".wav");
+				audio.play();
+				content[frame].removeEventListener("click", nextFrame);
+				content[frame].classList.remove("active");
+				if (frame+1 < content.length){
+					setTimeout(function() {
+						content[frame+1].style.display = "inline";
+						content[frame+1].classList.add("active");
+						content[frame+1].scrollIntoView();
+						if (content[frame+1].nodeName == "IMG") {
+							content[frame+1].style.transform = "scale(3) rotate("+(Math.random()*20-10)+"deg)";
+						}
+						frame += 1;
+					}, content[frame].getAttribute("data-time"));
+				};
+			}
+		</script>
+	</body>
+</html>

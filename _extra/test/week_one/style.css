@@ -1,0 +1,10 @@
+.testclass {
+  color:magenta;
+  font-size: 30pt;
+  font-family:sans-serif;
+}
+.elmo{
+  background-color: blue;
+  background-position: center;
+  padding-left: 40%;
+}
